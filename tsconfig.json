@@ -1,0 +1,17 @@
+{
+	"exclude": [
+		"node_modules",
+		"bower_components",
+		"jspm_packages",
+		"typings/express",
+		"typings/express-serve-static-core",
+		"typings/mime",
+		"typings/node",
+		"typings/serve-static"
+	],
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"moduleResolution": "classic"
+	}
+}

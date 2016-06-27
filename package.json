@@ -1,0 +1,24 @@
+{
+  "name": "videomanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrent \"npm run nodemon\" \"npm run tsc\"",
+    "nodemon": "nodemon app.js 9000",
+    "tsc": "tsc -w -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firen66/VideoOrganiser.git"
+  },
+  "author": "Michael Mehske",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firen66/VideoOrganiser/issues"
+  },
+  "homepage": "https://github.com/firen66/VideoOrganiser#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
