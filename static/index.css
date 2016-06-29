@@ -1,0 +1,39 @@
+#vertical-container {
+	height: 292px;
+	width: 100%;
+	max-width: 400px;
+}
+
+.repeated-item {
+	border-bottom: 1px solid #ddd;
+	box-sizing: border-box;
+	height: 40px;
+	padding: 10px;
+}
+
+.repeated-item md-menu {
+	margin-top: -20px;
+	right: 0px;
+	position: absolute;
+}
+
+md-content {
+	margin: 16px;
+}
+
+md-virtual-repeat-container {
+	border: 1px solid grey;
+}
+
+.md-virtual-repeat-container .md-virtual-repeat-offsetter div {
+	padding-left: 16px;
+}
+
+.hover, .selected {
+	background-color: grey;
+}
+
+.mdi {
+	padding-top: 10px;
+	margin-right: 10px;
+}

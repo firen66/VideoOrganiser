@@ -19,6 +19,12 @@
     },
     "mime/mime.d.ts": {
       "commit": "2743ece76d3b31df635afdc39c63ed13acf393ad"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "43449c604f997d75e917769c662e3d3b3fb2c0ae"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "43449c604f997d75e917769c662e3d3b3fb2c0ae"
     }
   }
 }

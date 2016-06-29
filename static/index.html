@@ -4,8 +4,45 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Video Manager</title>
-    </head>
-    <body>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+        <script src="https:///cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-animate.min.js"></script>
+        <script src="https:///cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-aria.min.js"></script>
+        <script src="https:///cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-messages.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc.5/angular-material.min.js"></script>
+
+        <script src="app.js"></script>
+        <script src="js.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.0-rc.5/angular-material.min.css">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body ng-app="app" ng-controller="mainCtrl">
+        <md-virtual-repeat-container id="vertical-container">
+            <div md-virtual-repeat="item in list" flex class="repeated-item" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-class="{hover: hover}"
+                    ondragover="allowDrop(event)" ondrop="drop(event)" draggable="true" ondragstart="drag(event)">
+                {{item}}
+            </div>
+        </md-virtual-repeat-container>
+        <md-virtual-repeat-container id="vertical-container">
+            <div md-virtual-repeat="item in list" flex class="repeated-item" ng-click="selected = true; hover=false" ng-mouseenter="hover = true" ng-mouseleave="hover = false" ng-class="{hover: hover, selected: selected}"
+                    ondragover="allowDrop(event)" ondrop="drop(event)" draggable="true" ondragstart="drag(event)">
+                {{item}}
+                <md-menu>
+                    <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                        <i class="mdi mdi-menu"></i>
+                    </md-button>
+                    <md-menu-content width="6">
+                        <md-menu-item>
+                            <md-button>
+                                <i class="mdi mdi-tag-multiple"></i>
+                                Tag it!
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-virtual-repeat-container>
     </body>
 </html>
